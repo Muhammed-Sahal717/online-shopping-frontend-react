@@ -11,6 +11,8 @@ function ProductDetails({ addToCart }) {
       description:
         "Comfortable wireless headphones with clear sound and long battery life.",
       category: "Audio",
+      image:
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 2,
@@ -19,6 +21,8 @@ function ProductDetails({ addToCart }) {
       description:
         "A modern smartwatch with fitness tracking and notification support.",
       category: "Wearables",
+      image:
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 3,
@@ -27,6 +31,8 @@ function ProductDetails({ addToCart }) {
       description:
         "A durable mechanical keyboard suitable for work and gaming.",
       category: "Computer Accessories",
+      image:
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 4,
@@ -34,6 +40,8 @@ function ProductDetails({ addToCart }) {
       price: 1299,
       description: "A comfortable wireless mouse with accurate tracking.",
       category: "Computer Accessories",
+      image:
+        "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 5,
@@ -42,6 +50,8 @@ function ProductDetails({ addToCart }) {
       description:
         "An adjustable laptop stand designed for comfortable working.",
       category: "Computer Accessories",
+      image:
+        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
     },
   ];
 
@@ -62,7 +72,9 @@ function ProductDetails({ addToCart }) {
   return (
     <main className="section">
       <div className="details-card">
-        <div className="details-image">{product.name.charAt(0)}</div>
+        <div className="details-image">
+          <img src={product.image} alt={product.name} />
+        </div>
 
         <div className="details-content">
           <h1>{product.name}</h1>

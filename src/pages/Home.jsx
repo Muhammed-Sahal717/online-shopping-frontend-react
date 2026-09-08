@@ -5,7 +5,7 @@ function Home() {
     <main>
       <section className="hero">
         <div>
-          <h1>Welcome to ShopEasy</h1>
+          <h1>Welcome to Online Shopping</h1>
 
           <p>Find quality products at affordable prices.</p>
 

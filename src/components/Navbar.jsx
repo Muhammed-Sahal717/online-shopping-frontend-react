@@ -5,7 +5,7 @@ function Navbar({ cartCount }) {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="logo">
-          ShopEasy
+          Online Shopping
         </Link>
 
         <div className="nav-links">

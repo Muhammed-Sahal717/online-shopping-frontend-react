@@ -8,6 +8,8 @@ function Products({ addToCart }) {
       price: 2499,
       description:
         "Comfortable wireless headphones with clear sound and long battery life.",
+      image:
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 2,
@@ -15,6 +17,8 @@ function Products({ addToCart }) {
       price: 3499,
       description:
         "A modern smartwatch with fitness tracking and notification support.",
+      image:
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 3,
@@ -22,12 +26,16 @@ function Products({ addToCart }) {
       price: 2999,
       description:
         "A durable mechanical keyboard suitable for work and gaming.",
+      image:
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 4,
       name: "Wireless Mouse",
       price: 1299,
       description: "A comfortable wireless mouse with accurate tracking.",
+      image:
+        "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 5,
@@ -35,6 +43,8 @@ function Products({ addToCart }) {
       price: 999,
       description:
         "An adjustable laptop stand designed for comfortable working.",
+      image:
+        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
     },
   ];
 
@@ -45,7 +55,9 @@ function Products({ addToCart }) {
       <div className="product-grid">
         {products.map((product) => (
           <div className="product-card" key={product.id}>
-            <div className="product-image">{product.name.charAt(0)}</div>
+            <div className="product-image">
+              <img src={product.image} alt={product.name} />
+            </div>
 
             <h2>{product.name}</h2>
 

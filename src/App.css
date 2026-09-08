@@ -2,11 +2,23 @@
   box-sizing: border-box;
 }
 
+:root {
+  --navy: #0f172a;
+  --navy-light: #1e293b;
+  --orange: #f97316;
+  --orange-dark: #ea580c;
+  --page-background: #f8fafc;
+  --surface: #ffffff;
+  --text: #334155;
+  --muted: #64748b;
+  --border: #e2e8f0;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: var(--page-background);
+  color: var(--text);
 }
 
 a {
@@ -16,7 +28,7 @@ a {
 /* ================= NAVBAR ================= */
 
 .navbar {
-  background-color: #212121;
+  background-color: var(--navy);
   padding: 15px 20px;
 }
 
@@ -45,7 +57,7 @@ a {
 }
 
 .nav-links a:hover {
-  color: #90caf9;
+  color: #fdba74;
 }
 
 /* ================= GENERAL ================= */
@@ -71,7 +83,7 @@ a {
 
   text-align: center;
 
-  background-color: #e3f2fd;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
 
   padding: 50px 20px;
 }
@@ -91,7 +103,7 @@ a {
 .button {
   display: inline-block;
 
-  background-color: #1976d2;
+  background-color: var(--orange);
   color: white;
 
   border: none;
@@ -105,16 +117,16 @@ a {
 }
 
 .button:hover {
-  background-color: #125ca1;
+  background-color: var(--orange-dark);
   color: white;
 }
 
 .secondary {
-  background-color: #555;
+  background-color: var(--navy-light);
 }
 
 .secondary:hover {
-  background-color: #333;
+  background-color: var(--navy);
 }
 
 /* ================= FEATURES ================= */
@@ -127,12 +139,12 @@ a {
 }
 
 .feature-card {
-  background-color: white;
+  background-color: var(--surface);
   padding: 25px;
 
   border-radius: 8px;
 
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
 }
 
 /* ================= PRODUCTS ================= */
@@ -146,13 +158,13 @@ a {
 }
 
 .product-card {
-  background-color: white;
+  background-color: var(--surface);
 
   padding: 20px;
 
   border-radius: 8px;
 
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
 
   display: flex;
   flex-direction: column;
@@ -165,22 +177,26 @@ a {
   align-items: center;
   justify-content: center;
 
-  background-color: #e3f2fd;
+  background-color: #fff7ed;
 
   border-radius: 6px;
 
-  font-size: 50px;
-  font-weight: bold;
-
-  color: #1976d2;
-
   margin-bottom: 15px;
+}
+
+.product-image img,
+.details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
 }
 
 .price {
   font-size: 20px;
   font-weight: bold;
-  color: #1976d2;
+  color: var(--orange-dark);
 }
 
 .product-buttons {
@@ -199,7 +215,7 @@ a {
 /* ================= PRODUCT DETAILS ================= */
 
 .details-card {
-  background-color: white;
+  background-color: var(--surface);
 
   padding: 30px;
 
@@ -210,7 +226,7 @@ a {
 
   gap: 40px;
 
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
 }
 
 .details-image {
@@ -220,13 +236,10 @@ a {
   align-items: center;
   justify-content: center;
 
-  background-color: #e3f2fd;
+  background-color: #fff7ed;
 
   border-radius: 8px;
 
-  font-size: 100px;
-  font-weight: bold;
-  color: #1976d2;
 }
 
 .details-content {
@@ -237,7 +250,7 @@ a {
 
 .back-link {
   margin-top: 20px;
-  color: #1976d2;
+  color: var(--orange-dark);
 }
 
 /* ================= CART ================= */
@@ -249,7 +262,7 @@ a {
 }
 
 .cart-item {
-  background-color: white;
+  background-color: var(--surface);
 
   padding: 20px;
 
@@ -259,7 +272,7 @@ a {
   justify-content: space-between;
   align-items: center;
 
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.07);
 }
 
 .cart-item h3 {
@@ -267,7 +280,7 @@ a {
 }
 
 .delete-button {
-  background-color: #dc3545;
+  background-color: #dc2626;
 
   color: white;
 
@@ -280,7 +293,7 @@ a {
 }
 
 .delete-button:hover {
-  background-color: #b02a37;
+  background-color: #b91c1c;
 }
 
 .cart-summary {
@@ -288,7 +301,7 @@ a {
 
   padding: 20px;
 
-  background-color: white;
+  background-color: var(--surface);
 
   border-radius: 7px;
 
@@ -308,13 +321,13 @@ a {
 
   margin: auto;
 
-  background-color: white;
+  background-color: var(--surface);
 
   padding: 30px;
 
   border-radius: 8px;
 
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
 }
 
 .checkout-card h1 {
@@ -340,7 +353,7 @@ a {
 
   padding: 11px;
 
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
 
   border-radius: 5px;
 
@@ -369,8 +382,8 @@ a {
 }
 
 .error {
-  background-color: #f8d7da;
-  color: #842029;
+  background-color: #fef2f2;
+  color: #991b1b;
 
   padding: 12px;
 
