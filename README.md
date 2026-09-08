@@ -1,16 +1,99 @@
-# React + Vite
+# React Online Shopping Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple online shopping frontend application built with React to practice routing, state management, React Hooks, form handling, and component-based development.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive navigation bar
+- Home page
+- Products page with 5 products
+- Product details page
+- Dynamic product routing
+- Add products to cart
+- Remove products from cart
+- Shopping cart total calculation
+- Empty cart message
+- Checkout form
+- Form validation
+- Multiple payment methods
+- Order success message
+- Automatic redirect after placing an order
+- 404 page for invalid routes
+- Responsive design
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- HTML
+- CSS
+- React Router DOM
+- React Hooks
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+├── App.jsx
+├── App.css
+├── main.jsx
+│
+├── components/
+│   └── Navbar.jsx
+│
+└── pages/
+    ├── Home.jsx
+    ├── Products.jsx
+    ├── ProductDetails.jsx
+    ├── Cart.jsx
+    ├── Checkout.jsx
+    └── NotFound.jsx
+```
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+cd online-shopping
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Install React Router:
+
+```bash
+npm install react-router-dom
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in the terminal.
+
+## React Concepts Used
+
+- Functional components
+- Component-based architecture
+- Props
+- `useState`
+- `useParams`
+- `useNavigate`
+- Controlled form components
+- Event handling
+- Conditional rendering
+- Dynamic rendering with `.map()`
+- Array methods such as `filter()` and `reduce()`
+- Client-side routing
+
+## Purpose
+
+This project was created as a learning mini project to practice building a multi-page-style shopping application with React and understand the fundamentals of routing, state management, form handling, and reusable components.
